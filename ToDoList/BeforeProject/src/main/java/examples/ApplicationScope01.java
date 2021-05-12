@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+//value는 application scope이므로 application이 끝날때까지 변수는 계속 유지, 공유
 @WebServlet("/as01")
 public class ApplicationScope01 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
