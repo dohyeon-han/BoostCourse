@@ -1,6 +1,9 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<!-- jstl을 사용하면 스크립트릿 사용울 줄여 가독성을 높일 수 있다 -->
+<!-- scope를 명시하여 변수의 볌위를 결정한다 -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%-- <%
 request.setAttribute("n", 10);
