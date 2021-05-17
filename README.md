@@ -8,7 +8,7 @@ https://www.boostcourse.org/web316
   
 ## 2. To do list
    ### 1. 프로젝트 전
-       * 변수의 Scope
-       * EL, JSTL
-       * JDBC
+     * 변수의 Scope
+     * EL, JSTL
+     * JDBC
   
