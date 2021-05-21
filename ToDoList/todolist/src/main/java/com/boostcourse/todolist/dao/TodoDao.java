@@ -1,39 +1,56 @@
 package com.boostcourse.todolist.dao;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * Servlet implementation class TodoDao
- */
+import javax.servlet.http.HttpServlet;
+
+import com.boostcourse.todolist.dto.TodoDto;
+
 public class TodoDao extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public TodoDao() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	
+	private static String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	private static String id = "c##scott";
+	private static String pw = "tiger";
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	public List<TodoDto> getTodo(String state) {
+		List<TodoDto> list = new ArrayList<TodoDto>();
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		String sql = "select * from todo where type='"+state+"' order by regdate desc";
+		try(Connection con = DriverManager.getConnection(url,id,pw);
+				PreparedStatement pstmt = con.prepareStatement(sql);
+				
+				ResultSet rs = pstmt.executeQuery();){
+			
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				String title = rs.getString("title");
+				String name = rs.getString("name");
+				String type = rs.getString("type");
+				int seq = rs.getInt("sequence");
+				Date date = rs.getDate("regdate");
+				SimpleDateFormat transFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+				String date_str = transFormat.format(date);
+
+				TodoDto data = new TodoDto(id, title, name, seq, type, date_str);
+				list.add(data);
+			}			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
+	
 }
