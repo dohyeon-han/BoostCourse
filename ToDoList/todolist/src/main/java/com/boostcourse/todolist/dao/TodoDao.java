@@ -52,5 +52,33 @@ public class TodoDao extends HttpServlet {
 		}
 		return list;
 	}
-	
+	public void addTodo(TodoDto dto) {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		String sql = "insert into todo(id,title,name,type,sequence) values(auto_inc.nextval,?,?,?,?)";
+		try(Connection con = DriverManager.getConnection(url,id,pw);
+				PreparedStatement pstmt = con.prepareStatement(sql);){
+			
+			pstmt.setString(1, dto.getTitle());
+			pstmt.setString(2, dto.getName());
+			pstmt.setString(3, dto.getType());
+			pstmt.setInt(4, dto.getSequence());
+			pstmt.executeUpdate();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void updateTodo(String type, int id) {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		String sql = "update todo set type='' where id="+id;
+	}
 }
