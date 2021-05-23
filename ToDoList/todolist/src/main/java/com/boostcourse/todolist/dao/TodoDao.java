@@ -15,26 +15,31 @@ import com.boostcourse.todolist.dto.TodoDto;
 
 public class TodoDao extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	private static String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	private static String id = "c##scott";
 	private static String pw = "tiger";
 
-	public List<TodoDto> getTodo(String state) {
-		List<TodoDto> list = new ArrayList<TodoDto>();
+	public void oracle() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-		}catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		String sql = "select * from todo where type='"+state+"' order by regdate desc";
-		try(Connection con = DriverManager.getConnection(url,id,pw);
+	}
+
+	public List<TodoDto> getTodo(String state) {
+		List<TodoDto> list = new ArrayList<TodoDto>();
+
+		oracle();
+
+		String sql = "select * from todo where type='" + state + "' order by regdate";
+		try (Connection con = DriverManager.getConnection(url, id, pw);
 				PreparedStatement pstmt = con.prepareStatement(sql);
-				
-				ResultSet rs = pstmt.executeQuery();){
-			
-			while(rs.next()) {
+
+				ResultSet rs = pstmt.executeQuery();) {
+
+			while (rs.next()) {
 				int id = rs.getInt("id");
 				String title = rs.getString("title");
 				String name = rs.getString("name");
@@ -46,39 +51,50 @@ public class TodoDao extends HttpServlet {
 
 				TodoDto data = new TodoDto(id, title, name, seq, type, date_str);
 				list.add(data);
-			}			
-		}catch (Exception e) {
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return list;
 	}
+
 	public void addTodo(TodoDto dto) {
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-		}catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		String sql = "insert into todo(id,title,name,type,sequence) values(auto_inc.nextval,?,?,?,?)";
-		try(Connection con = DriverManager.getConnection(url,id,pw);
-				PreparedStatement pstmt = con.prepareStatement(sql);){
-			
+		oracle();
+
+		String sql = "insert into todo(id,title,name,type,sequence) values(auto_inc.nextval,?,?,'TODO',?)";
+		try (Connection con = DriverManager.getConnection(url, id, pw);
+				PreparedStatement pstmt = con.prepareStatement(sql);) {
+
 			pstmt.setString(1, dto.getTitle());
 			pstmt.setString(2, dto.getName());
-			pstmt.setString(3, dto.getType());
-			pstmt.setInt(4, dto.getSequence());
+			pstmt.setInt(3, dto.getSequence());
 			pstmt.executeUpdate();
-			
-		}catch (Exception e) {
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	public void updateTodo(String type, int id) {
-		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-		}catch (Exception e) {
+
+	public String updateTodo(String type, int todoId) {
+		oracle();
+
+		if (type.equals("todo"))
+			type = "DOING";
+		else
+			type = "DONE";
+
+		String sql = "update todo set type='" + type + "' where id=" + todoId;
+		int flag = 0;
+
+		try (Connection con = DriverManager.getConnection(url, id, pw);
+				PreparedStatement pstmt = con.prepareStatement(sql);) {
+
+			flag = pstmt.executeUpdate();
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		String sql = "update todo set type='' where id="+id;
+
+		return (flag == 1 ? "success" : "fali");
 	}
 }

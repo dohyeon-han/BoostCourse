@@ -19,9 +19,9 @@
 		<section>
 			<div class="list-container">
 				<div class="list-header">TODO</div>
-				<ul class=todoList>
+				<ul class="todo">
 					<c:forEach items="${todo }" var="list">
-						<li class="todo">
+						<li>
 							<div class="text">
 								<div class="what">
 									<c:out value="${list.getTitle() }" />
@@ -30,24 +30,16 @@
 									등록날짜: ${list.getRegDate() }<br> ${list.getName() }<br> 우선순위 ${list.getSequence() }
 								</div>
 							</div>
-							<button class="move-done-btn" onclick="moveTodo(${list})" }>→</button>
+							<button class="move-done-btn" onclick="moveBtn(${list.getId()}, this)">→</button>
 						</li>
 					</c:forEach>
-					<li class="todo">
-						<div class="text">
-
-							<div class="what">공부</div>
-							<div class="date">등록날짜:</div>
-						</div>
-						<button class="move-done-btn">→</button>
-					</li>
 				</ul>
 			</div>
 			<div class="list-container">
 				<div class="list-header">DOING</div>
-				<ul class=doingList>
+				<ul class="doing">
 					<c:forEach items="${doing }" var="list">
-						<li class="doing">
+						<li>
 							<div class="text">
 								<div class="what">
 									<c:out value="${list.getTitle() }" />
@@ -56,25 +48,16 @@
 									등록날짜: ${list.getRegDate() }<br> ${list.getName() }<br> 우선순위 ${list.getSequence() }
 								</div>
 							</div>
-							<form action="./todotype" action="post">
-								<button class="move-done-btn" onclick="moveTodo(${list.getId()}) id=${list.getId()">→</button>
-							</form>
+							<button class="move-done-btn" onclick="moveBtn(${list.getId()}, this)">→</button>
 						</li>
 					</c:forEach>
-					<li class="doing">
-						<div class="text">
-							<div class="what">공부</div>
-							<div class="date">등록날짜:</div>
-						</div>
-						<button class="move-done-btn" name="${list}">→</button>
-					</li>
 				</ul>
 			</div>
 			<div class="list-container">
 				<div class="list-header">DONE</div>
-				<ul class="doneList">
+				<ul class="done">
 					<c:forEach items="${done }" var="list">
-						<li class="done">
+						<li>
 							<div class="text">
 								<div class="what">
 									<c:out value="${list.getTitle() }" />
@@ -85,15 +68,10 @@
 							</div>
 						</li>
 					</c:forEach>
-					<li class="done">
-						<div class="text">
-							<div class="what">공부</div>
-							<div class="date">등록날짜:</div>
-						</div>
-					</li>
 				</ul>
 			</div>
 		</section>
 	</div>
+	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>

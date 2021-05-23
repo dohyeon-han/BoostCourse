@@ -8,19 +8,25 @@ import javax.servlet.http.HttpServlet;
 public class TodoDto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	int id, sequence;
-	String name, regDate, title, type;
+	private int id, sequence;
+	private String name, regDate, title, type;
 
 	public TodoDto() {
 		
 	}
-	public TodoDto(int id, String name, String title, int sequence,String type, String regDate) {
+	public TodoDto(int id, String title, String name, int sequence,String type, String regDate) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.regDate = regDate;
 		this.title = title;
 		this.type = type;
+		this.sequence = sequence;
+	}
+	public TodoDto(String title, String name, int sequence) {
+		super();
+		this.name = name;
+		this.title = title;
 		this.sequence = sequence;
 	}
 	public int getId() {

@@ -17,6 +17,7 @@ local.properties
 .project
 .classpath
 */target/*
+todolist/*
 
 # External tool builders
 .externalToolBuilders/
