@@ -13,7 +13,7 @@
   * TodoFormServlet.java - forward를 통해 newtodo.jsp로 이동
   * newtodo.jsp - div, placeholder, button 등을 이용해 각 요소 생성<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'내용 지우기' 버튼을 누르면 newtodo.js로 placeholder의 내용 삭제<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'제출' 버튼을 누르면 TodoAddServlet.java로 post방식으로 전달
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'제출' 버튼을 누르면 TodoAddServlet.java로 post방식으로 전달<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'이전' 버튼을 누르면 MainServlet.java로 이동
   * newtodo.css - 요소들 꾸미기
   * newtodo.js - '내용 지우기' 버튼을 누르면 placeholder의 내용 삭제
