@@ -1,4 +1,3 @@
-
 # To Do List
 ![todolist_project](https://user-images.githubusercontent.com/63232876/119270137-32b65c80-bc36-11eb-883b-959a93cf7df4.png)
 ## Main
@@ -11,4 +10,10 @@
   * index.css - float, flex를 활용해 각 요소 배치
 
 ## New Todo 등록
-  * 
+  * TodoFormServlet.java - forward를 통해 newtodo.jsp로 이동
+  * newtodo.jsp - div, placeholder, button 등을 이용해 각 요소 생성<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'내용 지우기' 버튼을 누르면 newtodo.js로 placeholder의 내용 삭제<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'제출' 버튼을 누르면 TodoAddServlet.java로 post방식으로 전달
+  * newtodo.css - 요소들 꾸미기
+  * newtodo.js - '내용 지우기' 버튼을 누르면 placeholder의 내용 삭제
+  * TodoAddServlet.java - 객체를 전달 받아 TodoDto객체를 만든 후 TodoDao.java로 TodoDto객체 전달
