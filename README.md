@@ -1,5 +1,5 @@
 # BoostCourse
-boostcourse를 통한 web programming 
+boostcourse를 통한 web programming <br>
 https://www.boostcourse.org/web316
 
 ## 1. 홈페이지
@@ -12,4 +12,6 @@ https://www.boostcourse.org/web316
   * 변수의 Scope
   * EL, JSTL
   * JDBC
+* To Do list
+  * https://github.com/dohyeon-han/BoostCourse/blob/main/ToDoList/todolist/todolist_summary.md
   
