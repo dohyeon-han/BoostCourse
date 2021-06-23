@@ -1,0 +1,40 @@
+body{
+	font-size: 20px;	
+}
+header{
+	text-align: center;
+	font-size: 30px;
+}
+section{
+	width: 300px;
+	margin: 0px auto;
+}
+.title{
+	list-style: none;
+	background-color: #96E8C8;
+	padding: 10px 0px;
+	margin: 0px;
+	display: flex;
+	justify-content: space-between;
+	
+}
+.title li{
+	display: inline-block;
+	margin: 0px auto;
+	padding: 0px;
+	width:80px;
+	text-align: center;
+}
+.title li:hover{
+	cursor: pointer;
+}
+.content{
+	list-style: none;
+	background-color: #A4F5D6;
+	padding: 20px;
+	margin: 0px;
+}
+.content li{
+	padding: 10px;
+}
+
