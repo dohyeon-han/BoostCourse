@@ -16,6 +16,8 @@
 		</listener-class>
 	</listener>
 
+	<!-- DispatcherServlet을 등록하고, 필요한 설정은 init-param을 통해 등록 -->
+	<!-- url-mapping은 '/'로 함으로써 모든 요청은 DispatcherServlet으로 온다  -->
 	<!-- Processes application requests -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
@@ -28,6 +30,7 @@
 			<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext
 			</param-value>
 		</init-param>
+		<!-- xml 파일 대신 class 파일로 dispatcher servlet 설정 -->
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>kr.or.connect.mvcexam.config.WebMvcContextConfiguration
