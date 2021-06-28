@@ -7,13 +7,13 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = { "kr.or.connect.mvcexam.controller" })
-public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
+public class WebMvcContextConfiguration implements WebMvcConfigurer {
 	@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/assets/**").addResourceLocations("classpath:/META-INF/resources/webjars/").setCachePeriod(31556926);
@@ -28,10 +28,12 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
         configurer.enable();
     }
    
+    
     @Override
     public void addViewControllers(final ViewControllerRegistry registry) {
     		System.out.println("addViewControllers가 호출됩니다. ");
         registry.addViewController("/").setViewName("main");
+        registry.addViewController("/main").setViewName("main");
     }
     
     @Bean
