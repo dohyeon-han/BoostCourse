@@ -35,7 +35,7 @@ public class GuestbookDao {
 	    public List<Guestbook> selectAll(Integer start, Integer limit) {
 	    		Map<String, Integer> params = new HashMap<>();
 	    		params.put("start", start+1);
-	    		params.put("limit", start+1+limit);
+	    		params.put("limit", start+limit);
 	        return jdbc.query(SELECT_PAGING, params, rowMapper);
 	    }
 
