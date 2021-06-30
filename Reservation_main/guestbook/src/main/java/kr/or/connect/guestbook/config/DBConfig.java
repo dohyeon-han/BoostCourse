@@ -1,4 +1,4 @@
-package kr.or.connect.gusetbook.config;
+package kr.or.connect.guestbook.config;
 
 import javax.sql.DataSource;
 
@@ -13,20 +13,18 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 @Configuration
 @EnableTransactionManagement
 public class DBConfig implements TransactionManagementConfigurer {
-	private String driverClassName = "com.mysql.jdbc.Driver";
-
+	private String driverClassName = "oracle.jdbc.driver.OracleDriver";
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
-
-	private String username = "c##scott";
-
+	private String user = "c##scott";
 	private String password = "tiger";
-
+	
+	//DB를 connection pool을 이용해 관리
 	@Bean
 	public DataSource dataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
 		dataSource.setDriverClassName(driverClassName);
 		dataSource.setUrl(url);
-		dataSource.setUsername(username);
+		dataSource.setUsername(user);
 		dataSource.setPassword(password);
 		return dataSource;
 	}
