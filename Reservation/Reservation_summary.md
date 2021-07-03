@@ -28,7 +28,7 @@
 ## Resouces
 
 ### JavaScript
-  * slide.js - DOMContentLoaded를 listener에 등록하고 해당 listener가 동작 후 PromotionApiController가 보낸 promotion 정보를 api를 통해 ajax로 받는다.
+  * slide.js - DOMContentLoaded를 eventlistener에 등록하고 해당 listener가 동작 후 PromotionApiController가 보낸 promotion 정보를 api를 통해 ajax로 받는다.
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   받은 promotion 정보를 이용해 DOM을 추가, requestAnimationFrame를 이용해 무한 슬라이드 구현
   
