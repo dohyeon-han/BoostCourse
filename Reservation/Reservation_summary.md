@@ -38,7 +38,7 @@
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   받은 promotion 정보를 이용해 DOM을 추가, requestAnimationFrame를 이용해 무한 슬라이드 구현
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Ajax와 api를 이용해 category 이름 및 클릭 동작 
+  Ajax와 api를 이용해 category 및 클릭 동작 구현
   
 ### CSS
   * reservation.css - 기존 형식에서 각 상황에 맞게 변환
