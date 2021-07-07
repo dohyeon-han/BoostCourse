@@ -19,7 +19,7 @@
   * DaoSql - db query문을 상수로 선언, 다른 파일에서 import static으로 사용
   * PromotionDao - 전체조회, 삽입, 삭제, 수정 구현
   * CategoryDao - 전체조회, 삽입, 삭제, 수정 구현
-  * ProductDao -
+  * ProductDao - 전체조회, id에 따른 조회, 선택된 product 수, 삽입, 삭제, 수정 구현
 
 ### Dto
   * Promotion - id, productId, productImageUrl를 변수로 선언
@@ -30,7 +30,7 @@
 ### Service.impl
   * PromotionServiceImpl - PromotionDao를 통해 얻은 promotion list를 그대로 return
   * CategoryServiecImpl - CategoryDao를 통해 얻은 category list를 그대로 return
-  * PromotionServiceImpl - 
+  * PrductServiceImpl - ProductDao를 통해 얻은 count, list를 return
 
 ## Resouces
 
