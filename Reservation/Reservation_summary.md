@@ -1,8 +1,10 @@
 # 예약 서비스
 
-![Uploading ezgif.com-gif-maker.gif…]()
-![main(1)](https://user-images.githubusercontent.com/63232876/124896881-c7272380-e018-11eb-832c-e8dc2fc13a30.png)
-![main(2)](https://user-images.githubusercontent.com/63232876/124896891-c8f0e700-e018-11eb-9a7c-c7b4ca2db9c3.png)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/63232876/124915522-99e47080-e02c-11eb-94af-e944f7b144d5.gif)
+<br>
+![main(1)](https://user-images.githubusercontent.com/63232876/124915479-8df8ae80-e02c-11eb-88d1-bb1a58a237ef.png)
+![main(2)](https://user-images.githubusercontent.com/63232876/124915486-8fc27200-e02c-11eb-99ff-4d1cacb57000.png)
+
 
 
 ## Package
