@@ -1,5 +1,9 @@
 # 예약 서비스
 
+![main(1)](https://user-images.githubusercontent.com/63232876/124896881-c7272380-e018-11eb-832c-e8dc2fc13a30.png)
+![main(2)](https://user-images.githubusercontent.com/63232876/124896891-c8f0e700-e018-11eb-9a7c-c7b4ca2db9c3.png)
+
+
 ## Package
 
 ### Config
@@ -42,6 +46,8 @@
   받은 promotion 정보를 이용해 DOM을 추가, requestAnimationFrame를 이용해 무한 슬라이드 구현
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   Ajax와 api를 이용해 category 및 클릭 동작 구현
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  tab을 이동할 때마다 ajax를 통해 4개 단위로 product를 받아 구현, 더보기 클릭 시 마다 4개씩 추가
   
 ### CSS
   * reservation.css - 기존 형식에서 각 상황에 맞게 변환
