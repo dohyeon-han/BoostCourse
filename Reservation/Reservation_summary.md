@@ -1,5 +1,6 @@
 # 예약 서비스
 
+![Uploading ezgif.com-gif-maker.gif…]()
 ![main(1)](https://user-images.githubusercontent.com/63232876/124896881-c7272380-e018-11eb-832c-e8dc2fc13a30.png)
 ![main(2)](https://user-images.githubusercontent.com/63232876/124896891-c8f0e700-e018-11eb-9a7c-c7b4ca2db9c3.png)
 
