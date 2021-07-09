@@ -5,8 +5,6 @@ var dataObj = {
         getData(){
             console.log(this.data);
         }
-
-
 }
 
 dataObj.data.forEach(v=>{//for 사용 안해도 됨, 실수 줄임, 짧다
