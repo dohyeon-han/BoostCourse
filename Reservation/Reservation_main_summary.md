@@ -24,9 +24,9 @@
 
 ### Dao
   * DaoSql - db query문을 상수로 선언, 다른 파일에서 import static으로 사용
-  * PromotionDao - 전체조회, 삽입, 삭제, 수정 구현
-  * CategoryDao - 전체조회, 삽입, 삭제, 수정 구현
-  * ProductDao - 전체조회, id에 따른 조회, 선택된 product 수, 삽입, 삭제, 수정 구현
+  * PromotionDao - 전체조회 구현
+  * CategoryDao - 전체조회 구현
+  * ProductDao - 전체조회, id에 따른 조회, 선택된 product 수 구현
 
 ### Dto
   * Promotion - id, productId, productImageUrl를 변수로 선언
