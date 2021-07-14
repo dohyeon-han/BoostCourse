@@ -6,7 +6,9 @@
   * CommentDao - productId에 따라 값 선택
   * CommentImageDao - InfoId, UserCommentId에 따라 값 선택
   * DisplayInfoDao - displayInfoId에 따라 값 선택
-  * DisplayInfoImageDao
+  * DisplayInfoImageDao - reservationInfoId, reservationUserCommentId를 이용해 필요한 값 선택
+  * ProductImageDao - productId를 이용해 필요한 값 선택
+  * ProductPriceDao - productId를 이용해 필요한 값 선택
   * DetailDaoSql - 각 DAO에서 사용할 SQL문을 작성
 
 ### DTO
@@ -16,3 +18,9 @@
   * DiaplayInfoImage - ''
   * ProductImage - ''
   * ProductPrice - ''
+
+### Service
+  * DetailServiceImpl - 각 DAO에서 구현한 메소드를 이용해 DTO를 완성하여 필요한 api형식으로 return, comment의 경우 object안에 list가 있으므로  그 형식을 완성한다.
+
+### Controller
+  * DetailApiController
