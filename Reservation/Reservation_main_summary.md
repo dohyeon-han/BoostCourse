@@ -19,8 +19,7 @@
   * WebMvcContextConfigurtion - dispatcher servlet를 위한 추가적인 설정 파일, controller를 scan
   
 ### Controller
-  * PromotionApiController - /api/promotions로 promotion list를 api 형식에 맞게 map 객체로 바꿔 return
-  * CategoryApiController - /api/categories로 promotion list를 api 형식에 맞게 map 객체로 바꿔 return
+  * MainApiController - 각 api를 url에 맞게 DAO의 메소드를 이용해 return
 
 ### Dao
   * DaoSql - db query문을 상수로 선언, 다른 파일에서 import static으로 사용
