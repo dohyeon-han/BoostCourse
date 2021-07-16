@@ -24,3 +24,8 @@
 
 ### Controller
   * DetailApiController - displayInfoId에 맞는 api return
+
+## JavaScript
+  * detail.js - url과 ajax를 통해 displayInfoId에 해당하는 내용 가져옴
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  화살표 클릭 시 움직이는 무한 슬라이드 구현
