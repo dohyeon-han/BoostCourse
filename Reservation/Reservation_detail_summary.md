@@ -28,4 +28,8 @@
 ## JavaScript
   * detail.js - url과 ajax를 통해 displayInfoId에 해당하는 내용 가져옴
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  화살표 클릭 시 움직이는 무한 슬라이드 구현
+  pagination객체 리터럴, setTimeout을 이용해 화살표 클릭 시 움직이는 무한 슬라이드 구현
+  
+  
+## 기타
+  * Category, Product, PromitionApiController -> 코드량도 적은데 굳이 나눌 필요는 없다고 생각해서 MainApiController로 통합
