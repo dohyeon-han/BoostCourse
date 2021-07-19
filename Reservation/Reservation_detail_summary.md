@@ -33,5 +33,9 @@
   펼쳐보기 
   
   
+## HTML, CSS
+  * detail.html - 기존 base에서 css에 맞게 class 변경
+  * reservation.css - image 크기에 맞게 좌표 변경
+  
 ## 기타
   * Category, Product, PromitionApiController -> 코드량도 적은데 굳이 나눌 필요는 없다고 생각해서 MainApiController로 통합
