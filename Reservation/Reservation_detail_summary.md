@@ -24,6 +24,8 @@
 
 ### Controller
   * DetailApiController - displayInfoId에 맞는 api return
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  사용자 정보 노출을 막기 위해 js에서 ajax을 사용하지 않고 서버에서 데이터 변경 후 jstl을 이용
 
 ## JavaScript
   * detail.js - url과 ajax를 통해 displayInfoId에 해당하는 내용 가져옴<br>
