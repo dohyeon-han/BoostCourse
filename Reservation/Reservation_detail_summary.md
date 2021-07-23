@@ -20,12 +20,12 @@
   * ProductPrice - ''
 
 ### Service
-  * DetailServiceImpl - 각 DAO에서 구현한 메소드를 이용해 DTO를 완성하여 필요한 api형식으로 return, comment의 경우 object안에 list가 있으므로  그 형식을 완성한다.
+  * DetailServiceImpl - 각 DAO에서 구현한 메소드를 이용해 DTO를 완성하여 필요한 api형식으로 return, comment의 경우 object안에 list가 있으므로  그 형식을 완성한다.<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   리뷰를 출력하기 위해 필요한 정보를 가공하여 list return
   
 ### Controller
-  * DetailApiController - displayInfoId에 맞는 api return
+  * DetailApiController - displayInfoId에 맞는 api return<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   리뷰의 사용자 id 노출을 막기 위해 js에서 ajax을 사용하지 않고 서버에서 데이터 변경 후 jstl을 이용
 
@@ -33,7 +33,7 @@
 ## JavaScript
   * detail.js - url과 ajax를 통해 displayInfoId에 해당하는 내용 가져옴<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Pagination객체 리터럴, setTimeout을 이용해 화살표 클릭 시 움직이는 무한 슬라이드 구현
+  Pagination객체 리터럴, setTimeout을 이용해 화살표 클릭 시 움직이는 무한 슬라이드 구현<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   Event delegation, handlebar를 이용해 tab 구현
   
