@@ -21,11 +21,14 @@
 
 ### Service
   * DetailServiceImpl - 각 DAO에서 구현한 메소드를 이용해 DTO를 완성하여 필요한 api형식으로 return, comment의 경우 object안에 list가 있으므로  그 형식을 완성한다.
-
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  리뷰를 출력하기 위해 필요한 정보를 가공하여 list return
+  
 ### Controller
   * DetailApiController - displayInfoId에 맞는 api return
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  사용자 정보 노출을 막기 위해 js에서 ajax을 사용하지 않고 서버에서 데이터 변경 후 jstl을 이용
+  리뷰의 사용자 id 노출을 막기 위해 js에서 ajax을 사용하지 않고 서버에서 데이터 변경 후 jstl을 이용
+
 
 ## JavaScript
   * detail.js - url과 ajax를 통해 displayInfoId에 해당하는 내용 가져옴<br>
@@ -35,9 +38,10 @@
   Event delegation, handlebar를 이용해 tab 구현
   
   
-## HTML, CSS
-  * detail.html - 기존 base에서 css에 맞게 class 변경
+## jsp, CSS
+  * detail.jsp - 기존 base에서 css에 맞게 class 변경, 서버에서 리뷰정보를 받아와 jstl을 이용해 출력
   * reservation.css - image 크기에 맞게 좌표 변경
+  * review.jsp - 서버에서 리뷰정보를 받아와 jstl을 이용해 출력
   
 ## 기타
   * Category, Product, PromitionApiController -> 코드량도 적은데 굳이 나눌 필요는 없다고 생각해서 MainApiController로 통합
