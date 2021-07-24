@@ -4,6 +4,7 @@
 
 <img src="https://user-images.githubusercontent.com/63232876/126861321-f28b699f-b006-4e98-8872-82887ed915c2.png" width="80%",height="80%"/>
 <img src="https://user-images.githubusercontent.com/63232876/126861319-305852ee-9c7a-4c17-a34e-5b3256c8556c.png" width="80%",height="80%"/>
+<img src="https://theorydb.github.io/assets/img/think/2019-06-25-think-future-ai-1.png" width="300" height="200">
 
 
 ## pakage
