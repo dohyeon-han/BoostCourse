@@ -1,9 +1,9 @@
 # 세부화면
 
-<img src="https://user-images.githubusercontent.com/63232876/126861318-511ba977-4df6-40e5-ae68-4849ae68c8e0.gif" width="80%",height="80%">
+<img src="https://user-images.githubusercontent.com/63232876/126861318-511ba977-4df6-40e5-ae68-4849ae68c8e0.gif" width="80%" height="80%">
 
-<img src="https://user-images.githubusercontent.com/63232876/126861321-f28b699f-b006-4e98-8872-82887ed915c2.png" width="80%",height="80%">
-<img src="https://user-images.githubusercontent.com/63232876/126861319-305852ee-9c7a-4c17-a34e-5b3256c8556c.png" width="80%",height="80%">
+<img src="https://user-images.githubusercontent.com/63232876/126861321-f28b699f-b006-4e98-8872-82887ed915c2.png" width="80%" height="80%">
+<img src="https://user-images.githubusercontent.com/63232876/126861319-305852ee-9c7a-4c17-a34e-5b3256c8556c.png" width="80%" height="80%">
 
 
 
