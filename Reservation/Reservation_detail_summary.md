@@ -1,5 +1,11 @@
 # 세부화면
 
+![detail_animation](https://user-images.githubusercontent.com/63232876/126861318-511ba977-4df6-40e5-ae68-4849ae68c8e0.gif)
+
+![화면 캡처 2021-07-24 163600](https://user-images.githubusercontent.com/63232876/126861321-f28b699f-b006-4e98-8872-82887ed915c2.png)
+![화면 캡처 2021-07-24 162937](https://user-images.githubusercontent.com/63232876/126861319-305852ee-9c7a-4c17-a34e-5b3256c8556c.png)
+
+
 ## pakage
 
 ### DAO
@@ -12,7 +18,7 @@
   * DetailDaoSql - 각 DAO에서 사용할 SQL문을 작성
 
 ### DTO
-  * Comment - api에 맞게 속성을 갖는다.
+  * Comment - api에 맞게 속성을 갖고 각각의 getter와 setter를 갖는다.
   * CommentImage - ''
   * DisplayInfo - ''
   * DiaplayInfoImage - ''
@@ -25,9 +31,9 @@
   리뷰를 출력하기 위해 필요한 정보를 가공하여 list return
   
 ### Controller
-  * DetailApiController - displayInfoId에 맞는 api return<br>
+  * DetailApiController - @PathVariable로 displayInfoId를 받고 이에 맞는 api return<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  리뷰의 사용자 id 노출을 막기 위해 js에서 ajax을 사용하지 않고 서버에서 데이터 변경 후 jstl을 이용
+  리뷰의 사용자 id 노출을 막기 위해 js에서 ajax을 사용하지 않고 서버에서 데이터 변경 후 addAttribute로 전달
 
 
 ## JavaScript
