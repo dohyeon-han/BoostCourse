@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        form > div{
+            text-align: center;
+        }
+        .inputWrap {
+            display: inline-block;
+        }
+        .inputWrap span {
+            margin: 5px;
+            float: left;
+        }
+        .inputWrap input {
+            margin: 5px;
+            float: right;
+        }
+        input[type='submit'] {
+            height: 60px;
+            padding-top: 3px;
+        }
+        .hiddne{
+            display: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="./main.html" method="post" id="login">
+        <div>
+            <div class="inputWrap">
+                <div class="email">
+                    <span> Email </span> <input type="text" name="email"><br />
+                </div>
+                <div class="password">
+                    <span> Password </span> <input type="password" name="password"><br />
+                </div>
+            </div>
+            <input type="submit" value="전송">
+        
+        </div>
+    </form>
+    <script>
+        const submitBtn = document.querySelector("input[type=submit]");
+        submitBtn.addEventListener("click",function(e){
+            e.preventDefault();
+            const emailValue = document.querySelector("input[name='email']").value;
+            const passValue = document.querySelector("input[name='password").value;
+            const emailValid = (/^[\w_\.]+@\w+\.\w+$/).test(emailValue);
+            const passLength = passValue.length;
+            if(!emailValid){
+                alert("유효하지 않은 이메일입니다.");
+            }
+            else if(passLength==0){
+                alert("비밀번호를 입력해주세요.");
+            }
+            else{
+                document.querySelector("#login").submit();
+            }
+        })
+    </script>
+</body>
+
+</html>
