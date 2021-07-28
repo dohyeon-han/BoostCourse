@@ -22,9 +22,7 @@ import kr.or.connect.guestbook.dto.Guestbook;
 import kr.or.connect.guestbook.service.GuestbookService;
 
 
-//@RestController를 이용해 기존의 @ResponseBody없이 json 형태로 data를 전달 할 수 있다.
 @RestController
-//class를 통째로 path에 등록해 하위 경로를 설정 할 수 있다.
 @RequestMapping(path="/guestbooks")
 public class GuestbookApiController {
 	@Autowired

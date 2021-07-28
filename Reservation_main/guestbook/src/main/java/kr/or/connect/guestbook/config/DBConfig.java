@@ -18,7 +18,6 @@ public class DBConfig implements TransactionManagementConfigurer {
 	private String user = "c##scott";
 	private String password = "tiger";
 	
-	//DB를 connection pool을 이용해 관리
 	@Bean
 	public DataSource dataSource() {
 		BasicDataSource dataSource = new BasicDataSource();

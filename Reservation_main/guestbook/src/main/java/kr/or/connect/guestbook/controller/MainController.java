@@ -3,11 +3,14 @@ package kr.or.connect.guestbook.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,21 +25,41 @@ public class MainController {
 	GuestbookService guestbookService;
 
 	@GetMapping("/list")
-	public String list(@RequestParam(name = "start", required = false, defaultValue = "0") int start, ModelMap model) {
-
-// startë¡œ ì‹œì‘í•˜ëŠ” ë°©ëª…ë¡ ëª©ë¡ êµ¬í•˜ê¸°
+	public String list(@RequestParam(name = "start", required = false, defaultValue = "0") int start, ModelMap model,
+			/*HttpServletRequest request*/
+			@CookieValue(name="visit", required = false, defaultValue = "0") String value
+			, HttpServletResponse response) {
+		
+//		String value = "1";
+//		
+//		Cookie[] cookies = request.getCookies();
+//		if(cookies!=null) {
+//			for(Cookie cookie : cookies) {
+//				if("visit".equals(cookie.getName())) {
+//					value = cookie.getValue();
+//					int intValue = Integer.parseInt(value);
+//					value = Integer.toString(intValue + 1);
+//					break;
+//				}
+//			}
+//		}		
+		
+		int intValue = Integer.parseInt(value);
+		value = Integer.toString(intValue + 1);
+		
+		Cookie cookie = new Cookie("visit", value);
+		cookie.setMaxAge(60*60*24*365);//À½¼ö´Â Å¬¶óÀÌ¾ğÆ® Á¾·á±îÁö À¯Áö, ÃÊ ´ÜÀ§ ¼ıÀÚ
+		cookie.setPath("/");//¸ğµç ÇÏÀ§ °æ·Î¿¡ ÁöÁ¤
+		response.addCookie(cookie);
+		
 		List<Guestbook> list = guestbookService.getGuestbooks(start);
 
-// ì „ì²´ í˜ì´ì§€ìˆ˜ êµ¬í•˜ê¸°
 		int count = guestbookService.getCount();
 		int pageCount = count / GuestbookService.LIMIT;
 		if (count % GuestbookService.LIMIT > 0)
 			pageCount++;
 
-// í˜ì´ì§€ ìˆ˜ë§Œí¼ startì˜ ê°’ì„ ë¦¬ìŠ¤íŠ¸ë¡œ ì €ì¥
-// ì˜ˆë¥¼ ë“¤ë©´ í˜ì´ì§€ìˆ˜ê°€ 3ì´ë©´
-// 0, 5, 10 ì´ë ‡ê²Œ ì €ì¥ëœë‹¤.
-// list?start=0 , list?start=5, list?start=10 ìœ¼ë¡œ ë§í¬ê°€ ê±¸ë¦°ë‹¤.
+
 		List<Integer> pageStartList = new ArrayList<>();
 		for (int i = 0; i < pageCount; i++) {
 			pageStartList.add(i * GuestbookService.LIMIT);
@@ -45,7 +68,7 @@ public class MainController {
 		model.addAttribute("list", list);
 		model.addAttribute("count", count);
 		model.addAttribute("pageStartList", pageStartList);
-
+		model.addAttribute("visit", value);
 		return "list";
 	}
 
