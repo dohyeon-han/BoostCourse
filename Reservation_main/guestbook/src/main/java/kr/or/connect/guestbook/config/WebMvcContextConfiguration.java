@@ -22,17 +22,14 @@ public class WebMvcContextConfiguration implements WebMvcConfigurer{
         registry.addResourceHandler("/js/**").addResourceLocations("/js/").setCachePeriod(31556926);
     }
  
-    //mapping 정보가 없는 url 처리
-    // default servlet handler를 사용하게 합니다.
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
    
-    //controller 없이 mapping
     @Override
     public void addViewControllers(final ViewControllerRegistry registry) {
-    	System.out.println("addViewControllers가 호출됩니다. ");
+    	System.out.println("addViewControllers");
         registry.addViewController("/").setViewName("home");
     }
     
