@@ -16,5 +16,6 @@
 		</form>
 	</c:if>
 	<a href="guess">다시 시작하기</a>
+	<a href="logout">로그아웃</a>
 </body>
 </html>

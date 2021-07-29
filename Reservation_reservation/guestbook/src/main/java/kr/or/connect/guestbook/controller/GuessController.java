@@ -6,17 +6,24 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class GuessController {
-	//클라이언트가 서버로 요청을 보내면 서버는 클라이언트 별 session id를 자동으로 생성한다.
-	//클라이언트는 id를 쿠키로 저장한고 서버는 id로 클라이언트 별 session을 구분한다.
-	//쿠키는 클라이언트, session은 서버, stateless를 보완
-	//controller에서 session을 따로 생성할 필요가 없다.
-	//원래는 request.getSession()이 필요하지만 spring은 자동으로 해준다.
+	// 클라이언트가 서버로 요청을 보내면 서버는 클라이언트 별 session id를 자동으로 생성한다.
+	// 클라이언트는 id를 쿠키로 저장한고 서버는 id로 클라이언트 별 session을 구분한다.
+	// 쿠키는 클라이언트, session은 서버, stateless를 보완
+	// controller에서 session을 따로 생성할 필요가 없다.
+	// 원래는 request.getSession()이 필요하지만 spring은 자동으로 해준다.
 	@GetMapping("/guess")
 	public String guess(@RequestParam(name = "number", required = false) Integer num,
-			HttpSession session, ModelMap modelMap) {
+			HttpSession session, ModelMap modelMap, RedirectAttributes redirect) {
+		
+		if(session.getAttribute("login") == null) {
+			redirect.addFlashAttribute("errorMsg", "로그인이 필요합니다.");
+			return "redirect:/loginform";
+		}
+		
 		String msg = null;
 		if(num==null) {
 			session.setAttribute("count", 0);
