@@ -16,5 +16,8 @@
   * ReserveService - Reservation list에 displayInfo를 채워 return
 
 ## Resource
+
+### JavaScript
+  * reserve.js - 
   
 
