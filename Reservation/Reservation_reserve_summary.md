@@ -18,6 +18,6 @@
 ## Resource
 
 ### JavaScript
-  * reserve.js - 
+  * reserve.js - 생성자 패턴으로 동작, api로 데이터를 받아와 화면에 출력
   
 
