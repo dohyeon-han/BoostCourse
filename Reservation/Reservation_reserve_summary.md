@@ -20,6 +20,6 @@
 ### JavaScript
   * reserve.js - 생성자 패턴으로 동작, api로 데이터를 받아와 화면에 출력
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  정규표현식으로 전화번호 체크
+  정규표현식으로 전화번호,이메일 확인
   
 
