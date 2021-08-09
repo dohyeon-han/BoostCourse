@@ -4,8 +4,9 @@
 
 ### Controller
   * ReserveController - /api/reservations로 데이터 받아옴
-  * MyReservationController - 세션을 통해 로그인하였는지 확인, 예약확인 클릭 시 session을 확인하여 bookinglogin.jsp 혹은 myreservation.jsp로 redirect
-
+  * LoginController - 세션을 통해 로그인하였는지 확인, 예약확인 클릭 시 session을 확인하여 bookinglogin.jsp 혹은 myreservation.jsp로 redirect<br>
+  로그인한 이메일을 세션에 저장
+  
 ### Dao
   * ReservationDao - displayInfo를 제외한 Reservation list return 
   * ReserveDaoSql - 각 메소드에 필요한 sql문 작성
