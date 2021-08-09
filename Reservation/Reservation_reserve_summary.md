@@ -4,7 +4,8 @@
 
 ### Controller
   * ReserveController - /api/reservations로 데이터 받아옴
-  * LoginController - 세션을 통해 로그인하였는지 확인, 예약확인 클릭 시 session을 확인하여 bookinglogin.jsp 혹은 myreservation.jsp로 redirect<br>
+  * LoginController - 세션을 통해 로그인하였는지 확인<br>
+  예약확인 클릭 시 session을 확인하여 bookinglogin.jsp 혹은 myreservation.jsp로 redirect
   로그인한 이메일을 세션에 저장
   
 ### Dao
@@ -20,8 +21,7 @@
 ## Resource
 
 ### JavaScript
-  * reserv - 생성자 패턴으로 동작, api로 데이터를 받아와 화면에 출력
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  * reserv - 생성자 패턴으로 동작, api로 데이터를 받아와 화면에 출력<br>
   정규표현식으로 전화번호,이메일 확인
 
 ### JSP
