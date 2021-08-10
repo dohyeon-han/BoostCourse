@@ -21,11 +21,15 @@
 ## Resource
 
 ### JavaScript
-  * reserv - 생성자 패턴으로 동작, api로 데이터를 받아와 화면에 출력<br>
+  * reserve - 생성자 패턴으로 동작, api로 데이터를 받아와 화면에 출력<br>
   정규표현식으로 전화번호,이메일 확인
+  * myreservation - 취소 클릭시 취소된 예약으로 카드 이동
 
 ### JSP
   * reserve
   * bookinglogin
   * myreservation
+
+## 기타
+  * apicontroller package의 ApiController class 생성, api관련 메소드를 한 곳에 이동
 
