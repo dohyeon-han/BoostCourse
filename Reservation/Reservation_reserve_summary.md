@@ -17,7 +17,8 @@
   * Reservation - api 형식에 맞게 속성 작성
 
 ### Service 
-  * ReserveService - Reservation list에 displayInfo를 채워 return
+  * ReserveService - Reservation list에 displayInfo를 채워 return<br>
+  사용자 예약 정보를 ApiController로부터 받아 Map으로 변환, 각  정보를 ReservationDao로 전달
 
 ## Resource
 
