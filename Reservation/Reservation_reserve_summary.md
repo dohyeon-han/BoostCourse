@@ -11,15 +11,19 @@
   
 ### Dao
   * ReservationDao - displayInfo를 제외한 Reservation list return<br>
-  DB 사용자 정보를 저장하고 executeAndReturnKey로 pk를 받아 각 가격 정보 저장
+  DB 사용자 정보를 저장하고 executeAndReturnKey로 pk를 받아 각 가격 정보 저장<br>
+  reservationId를 받아 예약 정보 취소
   * ReserveDaoSql - 각 메소드에 필요한 sql문 작성
 
 ### Dto
   * Reservation - api 형식에 맞게 속성 작성
+  * PersonalReservation -  api 형식에 맞게 속성 작성
+  * Price - PersonalReservation의 List<Price> 속성
 
 ### Service 
   * ReserveService - Reservation list에 displayInfo를 채워 return<br>
-  사용자 예약 정보를 ApiController로부터 받아 Map으로 변환, 각  정보를 ReservationDao로 전달
+  사용자 예약 정보를 ApiController로부터 받아 PersonalReservation으로 변환, 각  정보를 ReservationDao로 전달<br>
+  reservationId를  ApiController로부터 받아 DAO로 전달
 
 ## Resource
 
