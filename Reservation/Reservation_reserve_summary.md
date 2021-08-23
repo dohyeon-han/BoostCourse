@@ -1,6 +1,17 @@
 # 예약
 
+  * 예약 화면
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/130392882-20cc1c79-feb5-49ca-9034-c4269ae2ed5f.gif" width="40%" height="40%"></p>
+  * 예약하기
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/130392978-94e1d233-41de-4a09-9f72-233e57c7d477.gif" width="40%" height="40%"></p>
+  * 로그인
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/130392989-3a1363f4-2843-4345-9525-a7b7c79eacfd.gif" width="40%" height="40%"></p>
+  * 예약 취소
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/130393008-52cdfd70-cb00-42dc-bbd4-fe7e83a73a99.gif" width="40%" height="40%"></p>
+
 ## Package
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/130393424-5a88f9f7-66ef-4469-b3fa-16fdc3e41f3c.png" width="40%" height="40%"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/130393427-911c9487-5e8f-403d-841d-8de898b68bcd.png" width="40%" height="40%"></p>
 
 ### Controller
   * ReserveController - 예약 화면 return, 현재 날짜, 랜덤 예약 날짜(Math.random), 예약 마지막 날짜(현재 + 4) 전달
