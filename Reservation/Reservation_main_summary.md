@@ -52,6 +52,8 @@
   Ajax와 api를 이용해 category 및 클릭 동작 구현
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   tab을 이동할 때마다 ajax를 통해 4개 단위로 product를 받아 구현, 더보기 클릭 시 마다 4개씩 추가
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  생성자 패턴 적용
   
 ### CSS
   * reservation.css - 기존 형식에서 각 상황에 맞게 변환
