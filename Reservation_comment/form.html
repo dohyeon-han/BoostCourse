@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>form</title>
+
+</head>
+<body>
+    <form method="POST" id="form" name="form" enctype="multipart/form-data">
+        <div class="imgInput">
+            <input type="file" id="img" name="img"accept="image/*">accept로 파일 유형 제한, 모든 브라우저에서 통하진 않음
+            <img id="thumbImg" src="" height="50" style="display:none"/>
+        </div>
+        <input type="submit" value="전송">
+    </form>
+</body>
+<script>
+    function thumb(){
+        const input = document.querySelector("#img");
+        input.addEventListener("change", e=>{
+            const file = e.target.files[0];
+            if(!validFile(file)){
+                alert("유효하지 않은 파일 입니다.");
+                img.value="";
+                return;
+            }
+            const img = document.querySelector("#thumbImg");
+            img.style.display="block";
+            img.src = window.URL.createObjectURL(file);
+            input.parentElement.appendChild(img);
+        })
+    }
+    function validFile(file){//유효한 확장자인가?
+        return (["image/png"].indexOf(file.type)>-1);
+    }
+    thumb();
+</script>
+</html>
