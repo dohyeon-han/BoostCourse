@@ -6,17 +6,18 @@
   * CommentController - displayInfoId를 @PathVariable로 받아 myreservation.jsp에서 reviewWrite.jsp로 view return
 
 ### Controller
-  * ReviewWriteController - @PathVariable로 id를 받고, 만약 로그인 세션이 만료되면 다시 로그인 창으로 리다이렉트
+  * ReviewWriteController - 만약 로그인 세션이 만료되면 다시 로그인 창으로 리다이렉트,<br>
+  @PathVariable로 reservationInfoId, displayInfoId를 받고, 주소가 유효한 주소인지 email을 받아 session의 email과 비교 후 다르면 에러 페이지 띄우기<br>
   
 ### Dao
-  * ReviewWriteDao - 
+  * ReviewWriteDao - reservationInfoId, displayInfoId를 이용해 이용 완료한 email return
 
 ### Dto
   * ReviewWrite - 
   * CommentImage -
 
 ### Service.impl
-  * ReviewWriteServiceImpl -  
+  * ReviewWriteServiceImpl - ReviewWriteDao에 호출한 메서드 값 return
 
 
 ## JS
