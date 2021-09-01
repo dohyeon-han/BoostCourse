@@ -3,21 +3,25 @@
 ## Package
 
 ### Apicontriller
-  * CommentController - displayInfoId를 @PathVariable로 받아 myreservation.jsp에서 reviewWrite.jsp로 view return
+  * CommentController - form 값과 reservationInfoId 받고 파일이 있다면 저장<br>
+  ReviewWriteServiceImpl를 호출하여 ReviewWrite 타입의 결과 return
+  
 
 ### Controller
   * ReviewWriteController - 만약 로그인 세션이 만료되면 다시 로그인 창으로 리다이렉트,<br>
   @PathVariable로 reservationInfoId, displayInfoId를 받고, 주소가 유효한 주소인지 email을 받아 session의 email과 비교 후 다르면 에러 페이지 띄우기<br>
   
 ### Dao
-  * ReviewWriteDao - reservationInfoId, displayInfoId를 이용해 이용 완료한 email return
+  * ReviewWriteDao - reservationInfoId, displayInfoId를 이용해 이용 완료한 email을 db에서 찾아 return<br>
+  comment db에 입력, 
 
 ### Dto
   * ReviewWrite - 
   * CommentImage -
 
 ### Service.impl
-  * ReviewWriteServiceImpl - ReviewWriteDao에 호출한 메서드 값 return
+  * ReviewWriteServiceImpl - getReservationEmail 메서드로 ReviewWriteDao로부터 eamil을 받는다<br>
+  insertReview 메서드로 db에 입력한 comment의 pk, file의 pk를 받아 ReviewWrite 타입의 결과 return;
 
 
 ## JS
