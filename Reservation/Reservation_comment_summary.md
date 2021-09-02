@@ -3,7 +3,7 @@
 ## Package
 
 ### Apicontriller
-  * CommentController - form 값과 reservationInfoId 받고 파일이 있다면 저장<br>
+  * CommentController - form 값과 reservationInfoId을 @RequestParam으로 받는다.<br>
   ReviewWriteServiceImpl를 호출하여 ReviewWrite 타입의 결과 return
   
 
@@ -13,15 +13,18 @@
   
 ### Dao
   * ReviewWriteDao - reservationInfoId, displayInfoId를 이용해 이용 완료한 email을 db에서 찾아 return<br>
-  comment db에 입력, 
+  apicontroller로부터 받은 파라미터 map 객체로 reservation_user_comment 테이블에 입력<br>
+  detail package의 commentImage 타입을 받아 DB의 file_info, reservation_user_comment_image 테이블에 입력<br>
+  update메서드의 return 값이 id 인 줄 알았는데 아니어서 수정 중....
 
 ### Dto
   * ReviewWrite - 
-  * CommentImage -
 
 ### Service.impl
-  * ReviewWriteServiceImpl - getReservationEmail 메서드로 ReviewWriteDao로부터 eamil을 받는다<br>
-  insertReview 메서드로 db에 입력한 comment의 pk, file의 pk를 받아 ReviewWrite 타입의 결과 return;
+  * ReviewWriteServiceImpl - getReservationEmail 메서드로 ReviewWriteDao로부터 eamil을 return 받는다<br>
+  파일이 있다면 폴더에 업로드, 중복 방지를 위해 현재의 시간값을 파일 이름 앞에 추가<br>
+  insertReview 메서드로 DB에 입력한 각각 reservation_user_comment, file_info에 입력 후, pk를 받아 reservation_user_comment_image에 입력<br>
+  
 
 
 ## JS
