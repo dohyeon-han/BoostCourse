@@ -15,7 +15,7 @@
   * ReviewWriteDao - reservationInfoId, displayInfoId를 이용해 이용 완료한 email을 db에서 찾아 return<br>
   apicontroller로부터 받은 파라미터 map 객체로 reservation_user_comment 테이블에 입력<br>
   detail package의 commentImage 타입을 받아 DB의 file_info, reservation_user_comment_image 테이블에 입력<br>
-  update메서드의 return 값이 id 인 줄 알았는데 아니어서 수정 중....
+  SimpleJdbcInsert로 DB에 저장 후 id return
 
 ### Dto
   * ReviewWrite - 
@@ -33,6 +33,7 @@
   textarea의 글자 수 addEventListener("input")을 사용해 확인 밎 제한, 글자 수가 0이면 다시 info 띄움<br>
   file 썸네일 올리기, 삭제 시 input value를 없애야 같은 파일 다시 올리기 가능<br>
   사진 파일 선택 시 확장자 확인
+  ajax로 form 저장, 예외 발생 시 기존의 error page가 응답으로와 처리가 안되는 문제 발생
 
 ## 기타
   * server.xml - 프로젝트 외부로 옮긴 img의 외부 img 경로 설정
