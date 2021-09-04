@@ -2,9 +2,13 @@
 
 ## Package
 
-### Apicontriller
+### ApiController
   * CommentController - form 값과 reservationInfoId을 @RequestParam으로 받는다.<br>
   ReviewWriteServiceImpl를 호출하여 ReviewWrite 타입의 결과 return
+  
+### ExceptionController
+  * ExceptionController - view 요청과 ajax 요청이 모두 거쳐갈 수 있으므로 각 요청에 맞는 타입의 return 값을 반환해야 한다.<br>
+  HttpServletRequest를 받아 header의 값에 따라 json 혹은 페이지를 return 해준다.
   
 
 ### Controller
@@ -18,7 +22,7 @@
   SimpleJdbcInsert로 DB에 저장 후 id return
 
 ### Dto
-  * ReviewWrite - 
+  * ReviewWrite - ajax형식에 맞게 구현
 
 ### Service.impl
   * ReviewWriteServiceImpl - getReservationEmail 메서드로 ReviewWriteDao로부터 eamil을 return 받는다<br>
@@ -33,7 +37,7 @@
   textarea의 글자 수 addEventListener("input")을 사용해 확인 밎 제한, 글자 수가 0이면 다시 info 띄움<br>
   file 썸네일 올리기, 삭제 시 input value를 없애야 같은 파일 다시 올리기 가능<br>
   사진 파일 선택 시 확장자 확인
-  ajax로 form 저장, 예외 발생 시 기존의 error page가 응답으로와 처리가 안되는 문제 발생
+  ajax로 form 저장, response가 성공하면 예약확인 페이지로 이동, 실패 시 alert창을 띄운다
 
 ## 기타
   * server.xml - 프로젝트 외부로 옮긴 img의 외부 img 경로 설정
