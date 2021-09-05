@@ -2,14 +2,19 @@
 
 ## Package
 
+### Config
+  * WebMvcContextConfiguration - addInterceptors를 override하여 logInterceptor 등록
+
 ### ApiController
   * CommentController - form 값과 reservationInfoId을 @RequestParam으로 받는다.<br>
   ReviewWriteServiceImpl를 호출하여 ReviewWrite 타입의 결과 return
-  
+
+### Interceptor
+  * LogInterceptor - logback을 이용해 preHandle메소드에 logger.info로 각 요청마다 url, ip, 시간 콘솔에 출력
+
 ### ExceptionController
   * ExceptionController - view 요청과 ajax 요청이 모두 거쳐갈 수 있으므로 각 요청에 맞는 타입의 return 값을 반환해야 한다.<br>
   HttpServletRequest를 받아 header의 값에 따라 json 혹은 페이지를 return 해준다.
-  
 
 ### Controller
   * ReviewWriteController - 만약 로그인 세션이 만료되면 다시 로그인 창으로 리다이렉트,<br>
@@ -41,3 +46,4 @@
 
 ## 기타
   * server.xml - 프로젝트 외부로 옮긴 img의 외부 img 경로 설정
+  * pom.xml - logback 관련 의존성 추가
