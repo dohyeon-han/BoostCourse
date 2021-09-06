@@ -35,7 +35,6 @@
   insertReview 메서드로 DB에 입력한 각각 reservation_user_comment, file_info에 입력 후, pk를 받아 reservation_user_comment_image에 입력<br>
   
 
-
 ## JS
   * reviewWrite - Score class를 작성하여 클릭에 따라 평정 조작<br>
   ajax로 리뷰를 작성할 공연 정보 받음<br>
@@ -43,6 +42,7 @@
   file 썸네일 올리기, 삭제 시 input value를 없애야 같은 파일 다시 올리기 가능<br>
   사진 파일 선택 시 확장자 확인
   ajax로 form 저장, response가 성공하면 예약확인 페이지로 이동, 실패 시 alert창을 띄운다
+  DB 저장을 위해 정규표현식으로 textarea의 앞뒤 엔터, 연속된 엔터를 제거, 엔터는 <br>로 변경
 
 ## 기타
   * server.xml - 프로젝트 외부로 옮긴 img의 외부 img 경로 설정
