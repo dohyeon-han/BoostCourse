@@ -1,5 +1,10 @@
 # 한 줄 평
 
+<img src="https://user-images.githubusercontent.com/63232876/132319609-ceab06ca-b253-4c22-841e-a714233e4930.gif" width="40%" height="40%">
+<img src="https://user-images.githubusercontent.com/63232876/132319428-2139818b-376b-4f0a-80f0-567c68c61de6.gif" width="40%" height="40%">
+
+<img src="https://user-images.githubusercontent.com/63232876/132315597-8d3d0688-294f-4459-bbc1-99a36a4b0d15.png" width="40%" height="40%">
+<img src="https://user-images.githubusercontent.com/63232876/132315602-57878361-1b34-4c69-911a-a0a02dee4034.png" width="40%" height="40%">
 ## Package
 
 ### Config
@@ -18,7 +23,8 @@
 
 ### Controller
   * ReviewWriteController - 만약 로그인 세션이 만료되면 다시 로그인 창으로 리다이렉트,<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@PathVariable로 reservationInfoId, displayInfoId를 받고, 주소가 유효한 주소인지 email을 받아 session의 email과 비교 후 다르면 에러 페이지 띄우기<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@PathVariable로 reservationInfoId, displayInfoId를 받고,
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주소가 유효한 주소인지 email을 받아 session의 email과 비교 후 다르면 에러 페이지 띄우기<br>
   
 ### Dao
   * ReviewWriteDao - reservationInfoId, displayInfoId를 이용해 이용 완료한 email을 db에서 찾아 return<br>
@@ -32,7 +38,8 @@
 ### Service.impl
   * ReviewWriteServiceImpl - getReservationEmail 메서드로 ReviewWriteDao로부터 eamil을 return 받는다<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;파일이 있다면 폴더에 업로드, 중복 방지를 위해 현재의 시간값을 파일 이름 앞에 추가<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;insertReview 메서드로 DB에 입력한 각각 reservation_user_comment, file_info에 입력 후, pk를 받아 reservation_user_comment_image에 입력<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;insertReview 메서드로 DB에 입력한 각각 reservation_user_comment, file_info에 입력 후,
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pk를 받아 reservation_user_comment_image에 입력
   
 
 ## JS
@@ -42,7 +49,7 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file 썸네일 올리기, 삭제 시 input value를 없애야 같은 파일 다시 올리기 가능<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;사진 파일 선택 시 확장자 확인
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ajax로 form 저장, response가 성공하면 예약확인 페이지로 이동, 실패 시 alert창을 띄운다
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DB 저장을 위해 정규표현식으로 textarea의 앞뒤 엔터, 연속된 엔터를 제거, 엔터는 <br>로 변경
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DB 저장을 위해 정규표현식으로 textarea의 앞뒤 엔터, 연속된 엔터를 제거, 엔터는 br태그로 변경
 
 ## 기타
   * server.xml - 프로젝트 외부로 옮긴 img의 외부 img 경로 설정
