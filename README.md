@@ -35,3 +35,4 @@ https://www.boostcourse.org/web316
 ## 6. 예약 - 한줄평
   * fild upload, download
   * logging
+  * https://github.com/dohyeon-han/BoostCourse/blob/main/Reservation/Reservation_comment_summary.md
