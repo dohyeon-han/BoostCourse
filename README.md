@@ -38,7 +38,8 @@ https://www.boostcourse.org/web316
   * https://github.com/dohyeon-han/BoostCourse/blob/main/Reservation/Reservation_comment_summary.md
 
 ## 후기
-  * 처음으로 만들어본 그럴 듯한 프로젝트였다. ajax 사용법, class 형식, api, JDBC Template, Controller 등을 처음 사용해 보면서 여러 곳에서 막하기도 했고<br> 
+  * 처음으로 만들어본 그럴 듯한 프로젝트였다.<br>
+  ajax로 데이터 받아오기, class 형식, api, JDBC Template, Controller와 RestController 등을 처음 사용해 보면서 여러 곳에서 막히기도 했고<br> 
   '이렇게 하는게 맞나'하는 생각이 계속 들기도 했다. 그럴때마다 계속해서 다른 사람의 코드를 찾아보고 공부해 봤다.<br>
   강의에서 배운 내용을 조금만 바꿔 활용한 부분도 많아서 '이게 온전히 내가 만든 프로젝트다!' 라고는 할 수는 없지만,<br>
   처음 만든 스프링 프로젝트이고 앞으로 계속 배울 것이기 때문에 이렇게 하나을 했다는 것에 의미를 두고 싶다.
