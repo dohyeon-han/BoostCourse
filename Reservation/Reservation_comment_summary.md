@@ -5,8 +5,8 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/63232876/132319428-2139818b-376b-4f0a-80f0-567c68c61de6.gif" width="40%" height="40%"></p>
 
 ## Pakage 
-<img src="https://user-images.githubusercontent.com/63232876/132315597-8d3d0688-294f-4459-bbc1-99a36a4b0d15.png" width="40%" height="40%">
-<img src="https://user-images.githubusercontent.com/63232876/132315602-57878361-1b34-4c69-911a-a0a02dee4034.png" width="40%" height="40%">
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/132315597-8d3d0688-294f-4459-bbc1-99a36a4b0d15.png" width="40%" height="40%"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/132315602-57878361-1b34-4c69-911a-a0a02dee4034.png" width="40%" height="40%"></p>
 
 ### Config
   * WebMvcContextConfiguration - addInterceptors를 override하여 logInterceptor 등록
