@@ -49,10 +49,14 @@
   
 
 ### JSP
-  * reserve
-  * bookinglogin
-  * myreservation
+  * reserve - 공연 예약 화면
+  * bookinglogin - 단순한 로그인 화면, 정규 표현식으로 이메일 입력 확인
+  * myreservation - 자신의 예약 현황 출력
 
 ## 기타
   * apicontroller package의 ApiController class 생성, api관련 메소드를 한 곳에 이동
+
+## DB
+![image](https://user-images.githubusercontent.com/63232876/140598647-f0ea431a-1241-4bfd-8696-12d180449543.png)
+
 
