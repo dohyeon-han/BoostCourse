@@ -1,13 +1,11 @@
 # 예약 서비스
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/63232876/124915522-99e47080-e02c-11eb-94af-e944f7b144d5.gif)
-<br>
-![main(1)](https://user-images.githubusercontent.com/63232876/124915479-8df8ae80-e02c-11eb-88d1-bb1a58a237ef.png)
-![main(2)](https://user-images.githubusercontent.com/63232876/124915486-8fc27200-e02c-11eb-99ff-4d1cacb57000.png)
-
-
+* main
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/124915522-99e47080-e02c-11eb-94af-e944f7b144d5.gif" width="90%" height="90%"></p>
 
 ## Package
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/124915479-8df8ae80-e02c-11eb-88d1-bb1a58a237ef.png" width="40%" height="40%"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/124915486-8fc27200-e02c-11eb-99ff-4d1cacb57000.png" width="40%" height="40%"></p>
 
 ### Config
   * ApplicationConfiguration - DB관련 이벤트 처리, dao와 service를 scan
@@ -57,4 +55,6 @@
   
 ### CSS
   * reservation.css - 기존 형식에서 각 상황에 맞게 변환
-  
+
+## 
+![image](https://user-images.githubusercontent.com/63232876/140599335-3f51ab1d-be2b-4a9f-b250-c3292f9b91d5.png)
