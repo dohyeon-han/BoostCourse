@@ -70,9 +70,6 @@ https://www.boostcourse.org/web316
     * 소스코드 공개 불가 원칙으로 인해 비공개
     * api 스펙(http://49.236.147.192:9090/swagger-ui.html#/%EC%98%88%EC%95%BD%20API/createReservationCommentUsingPOST)
 
-
-
-
 ## 후기
   * 처음으로 만들어본 그럴 듯한 프로젝트였다.<br>
   ajax, class 형식, api, JDBC Template, Controller와 RestController 등을 처음 사용해 보면서 여러 곳에서 막히기도 했고<br> 
