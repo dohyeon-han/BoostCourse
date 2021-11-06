@@ -1,13 +1,11 @@
-# 세부화면
+# 상세 페이지
 
-<img src="https://user-images.githubusercontent.com/63232876/126861318-511ba977-4df6-40e5-ae68-4849ae68c8e0.gif" width="40%" height="40%">
+* 상세 페이지
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/126861318-511ba977-4df6-40e5-ae68-4849ae68c8e0.gif" width="40%" height="40%"></p>
 
-<img src="https://user-images.githubusercontent.com/63232876/126861321-f28b699f-b006-4e98-8872-82887ed915c2.png" width="40%" height="40%">
-<img src="https://user-images.githubusercontent.com/63232876/126861319-305852ee-9c7a-4c17-a34e-5b3256c8556c.png" width="40%" height="40%">
-
-
-
-## pakage
+## Pakage
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/126861321-f28b699f-b006-4e98-8872-82887ed915c2.png" width="40%" height="40%"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/63232876/126861319-305852ee-9c7a-4c17-a34e-5b3256c8556c.png" width="40%" height="40%"></p>
 
 ### DAO
   * CommentDao - productId에 따라 값 선택, comment의 score을 더해 평균 계산
@@ -52,3 +50,7 @@
   
 ## 기타
   * Category, Product, PromitionApiController -> 코드량도 적은데 굳이 나눌 필요는 없다고 생각해서 MainApiController로 통합
+
+## DB
+![image](https://user-images.githubusercontent.com/63232876/140599384-278dce98-b0aa-4c38-bfd4-517eaee40985.png)
+
