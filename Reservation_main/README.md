@@ -15,6 +15,7 @@ https://www.boostcourse.org/web316/joinLectures/12956?isDesc=false
 <h3>DI(Dependency injection)</h3>
 
 * spring이 생성한 인스턴스를 주입한다.
+- 개발자가 직접 class B의 인스턴스 생성
 ```JAVA
 public class A {
 
@@ -25,7 +26,7 @@ public class A {
     }
 }
 ```
-* 개발자가 직접 class B의 인스턴스 생성
+- spring이 인스턴스 생성하여 주입한다. IoC와 DI가 발생
 ```JAVA
 public class A {
 
@@ -34,8 +35,6 @@ public class A {
 
 }
 ```
-* spring이 인스턴스 생성하여 주입한다. IoC와 DI가 발생
-
 
 <h3>Spring JDBC</h3>
 
