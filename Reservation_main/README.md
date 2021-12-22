@@ -6,7 +6,7 @@ https://www.boostcourse.org/web316/joinLectures/12956?isDesc=false
 
 * 인스턴스의 생명 주기를 관리한다.
 * WAS의 web container를 통해 servlet을 생성, 관리한다.
-* spring도 container를 이용해 객체들을 관리하는데 이 객체를 bena이라 한다.
+* Spring도 container를 이용해 객체들을 관리하는데 이 객체를 bean이라 한다.
 
 <h3>IoC(Inversion of container)</h3>
 
